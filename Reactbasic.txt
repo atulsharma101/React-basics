@@ -1,0 +1,138 @@
+Namaste React (lecture =1)
+
+1. const heading=React.createElement("h1",{},"Namaste React");  //used to create the element.
+
+2.root.render(heading);    // this is to use to render the root to use react into this particular element;
+
+3.conmst root=ReactDOM.create(document.getElementById("root"); // it is used to create object of the created element so that react can be used into it.
+
+<-----------------------HW-------------------------->
+
+async=> async is the attribute which is used In the html tag which allows the browser to operate fetching the data and html parsing parallely.
+
+
+           <script async src="..."></script>
+defer=> defer attribute is used to 
+
+
+Emmet is a plugin for many popular text editors that greatly improves HTML and CSS workflow by allowing users to write code faster and more efficiently. It is particularly popular among web developers for its ability to expand shorthand notations into full-fledged code structures. Here are some key features and benefits of Emmet:
+
+Abbreviation Expansion: Emmet allows developers to write complex HTML and CSS code with simple abbreviations. For example, typing ul>li*5 and hitting the Emmet trigger (usually the Tab key) will expand to:
+
+html
+Copy code
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+CSS and HTML Support: Emmet works with both HTML and CSS, enabling quick generation of elements, attributes, and styles.
+
+Zen Coding: Emmet is based on an older tool called Zen Coding, and it enhances the original capabilities with more powerful features and better performance.
+
+Snippets and Customization: Users can define their own snippets and customize existing ones, making their workflow even more tailored to their specific needs.
+
+Integration with Editors: Emmet is available for a wide range of text editors and integrated development environments (IDEs), such as Visual Studio Code, Sublime Text, Atom, and many others.
+
+Productivity Boost: By reducing the amount of repetitive typing and minimizing syntax errors, Emmet significantly speeds up the process of writing HTML and CSS.
+
+In summary, Emmet is a valuable tool for web developers aiming to streamline their coding process and increase productivity through shorthand notation and other powerful features.
+
+
+
+The terms "library" and "framework" are often used in software development, and while they might seem similar, they serve different purposes and have distinct characteristics. Here's a breakdown of the differences between the two:
+
+### Library
+
+1. **Definition**:
+   - A library is a collection of pre-written code that developers can use to perform common tasks. It provides specific functionality that can be called upon whenever needed.
+   
+2. **Control**:
+   - When using a library, the developer is in control. They decide when and where to call the library functions or methods within their code.
+   
+3. **Usage**:
+   - Libraries are typically used to perform specific tasks, such as handling dates (like Moment.js), making HTTP requests (like Axios), or manipulating the DOM (like jQuery).
+   
+4. **Integration**:
+   - Libraries are integrated into the developer's codebase as needed. The developer's code is the main structure, and libraries are added to perform specific functionalities.
+
+5. **Example**:
+   - In JavaScript, libraries like Lodash, React (when used primarily as a UI library), or D3.js are commonly used.
+   
+### Framework
+
+1. **Definition**:
+   - A framework is a more comprehensive solution that provides a structure and set of rules for building applications. It often includes libraries but also defines the overall architecture of the application.
+   
+2. **Control**:
+   - When using a framework, the framework is in control. It calls the developer's code according to its internal flow and lifecycle.
+   
+3. **Usage**:
+   - Frameworks are used to build entire applications. They provide a skeleton for the application, along with guidelines and patterns for structuring the code.
+   
+4. **Integration**:
+   - Developers build their applications within the framework. The framework dictates the overall architecture, and developers fill in the specifics within that structure.
+   
+5. **Example**:
+   - In JavaScript, frameworks like Angular, Vue.js, or React (when used as a framework with a full ecosystem), and backend frameworks like Django (Python) or Ruby on Rails (Ruby) are examples.
+
+### Key Differences
+
+- **Inversion of Control**: In a library, the developer calls the library functions. In a framework, the framework calls the developer's code.
+- **Scope**: Libraries focus on specific functionalities, while frameworks provide a comprehensive structure for building applications.
+- **Flexibility**: Libraries offer more flexibility as they can be integrated into any part of the code. Frameworks enforce a certain way of structuring the application, which can limit flexibility but provides consistency.
+
+In summary, a library is a tool that you use when you need it, whereas a framework is a foundation upon which you build your application, adhering to its rules and structure.
+
+
+What is CDN? Why do we use it?
+CDN (Content Delivery Network):
+A CDN is a distributed network of servers that delivers web content to users based on their geographic location. The goal of a CDN is to improve the performance, reliability, and security of content delivery.
+
+Why we use CDN:
+
+Performance Improvement: CDNs reduce latency by serving content from servers closer to the user's location, resulting in faster load times.
+Load Balancing: Distributes the traffic load across multiple servers, preventing any single server from being overwhelmed.
+Reliability and Availability: CDNs have redundancy and failover mechanisms that ensure content remains available even if some servers go down.
+Bandwidth Savings: Offloads traffic from origin servers, reducing bandwidth costs.
+Security: CDNs often provide additional security features like DDoS protection and secure content delivery.
+Why is React known as React?
+React is known as "React" because it is designed to create interactive user interfaces that react to changes in data. The core concept of React is to build UI components that can efficiently update and render the right components when data changes, hence "React" reflects the idea of reactive programming and dynamic user interfaces.
+
+What is crossorigin in script tag?
+The crossorigin attribute in a script tag is used to handle the cross-origin requests for the script. It can have the following values:
+
+anonymous: Performs the request without credentials (like cookies or HTTP authentication).
+use-credentials: Sends credentials such as cookies along with the request.
+This attribute is often used when loading resources from a different origin (e.g., a CDN) to ensure proper handling of CORS (Cross-Origin Resource Sharing) policies.
+
+Example:
+
+html
+Copy code
+<script src="https://example.com/script.js" crossorigin="anonymous"></script>
+What is the difference between React and ReactDOM?
+React: React is the core library for building user interfaces. It focuses on the creation of components, managing state, and rendering elements. React provides the APIs for creating and managing components.
+ReactDOM: ReactDOM is a library that provides methods to work with the DOM (Document Object Model). It is used for rendering React components to the web and managing the updates to the DOM when the state of components changes.
+In essence, React contains the core functionalities for creating and managing UI components, while ReactDOM focuses on rendering those components in the browser.
+
+What is the difference between react.development.js and react.production.js files via CDN?
+react.development.js:
+
+Purpose: Intended for use during the development phase.
+Features: Includes detailed error messages, warnings, and full stack traces to aid debugging.
+File Size: Larger due to additional debugging information.
+Performance: Slower because of the extra debugging checks and messages.
+react.production.js:
+
+Purpose: Intended for use in production.
+Features: Minified and optimized for performance. Removes all development-only checks and warnings.
+File Size: Smaller due to minification and removal of debugging information.
+Performance: Faster since it does not include the overhead of development-only features.
+In summary, react.development.js is for development with tools to help developers debug and understand issues, while react.production.js is optimized for performance and smaller file size, suitable for use in a live, production environment.
+
+
+
+
